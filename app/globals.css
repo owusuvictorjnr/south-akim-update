@@ -2,26 +2,287 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #ebf0fa;
+}
+
+/* Navbar */
+nav {
+  @apply pb-4
+  border-b-2
+  border-gray-200
+  my-1
+  /* max-w-5xl */
+  bg-green-600
+  top-0
+  left-0
+  right-0
+  fixed;
+}
+
+.navbar {
+  @apply flex
+  justify-center
+  items-center
+  px-2
+  mx-auto
+  w-full
+  text-sm
+  lg:gap-[15rem];
+}
+
+.logo {
+  @apply rounded-full
+  py-1 px-1
+  h-[3rem]
+  w-[3rem];
+}
+
+nav h1 {
+  @apply text-sm 
+  text-white
+  capitalize
+  hover:text-gray-200;
+}
+
+nav ul {
+  @apply flex 
+  justify-center
+  gap-5
+  px-10
+  capitalize;
+}
+
+nav ul li {
+  @apply hover:underline
+  text-sm
+  text-white
+  hover:text-gray-200
+  md:text-lg;
+}
+
+/* About start */
+.About {
+  @apply flex
+  items-center
+  flex-col
+  relative
+  duration-700
+  text-sm
+  text-white
+  hover:text-gray-200
+  hover:underline
+  md:text-lg;
+}
+
+/* .About {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  position: relative;
+} */
+
+/* .about::after {
+  content: 'v';
+  margin-top: -0%;
+} */
+
+/* .about:hover > .dropDownItems {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  border: 1px solid green;
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  padding: 2px 8px 2px;
+} */
+
+.About:hover > .dropDownItems {
+  @apply flex
+  flex-col
+  absolute
+  top-[0.5rem]
+  bg-white/60
+  shadow-lg
+  /* border */
+  /* border-green-500 */
+  rounded
+  duration-700
+  right-0
+  gap-2
+  text-sm
+  w-[10rem]
+  min-h-[13rem]
+  pb-5
+  px-2
+  pt-5
+  mt-5
+  justify-center
+  lg:top-2;
+}
+
+.dropDownItems {
+  display: none;
+}
+
+.dropDownDiv {
+  @apply border 
+  bottom-2 
+  py-2 px-3 
+  rounded 
+  hover:bg-gray-200
+  text-blue-700
+  text-center
+  hover:duration-700
+  ease-out;
+}
+
+/* About end */
+
+/* Products Starts */
+.Products {
+  @apply flex
+  items-center
+  flex-col
+  relative
+  duration-700
+  text-sm
+  text-white
+  hover:text-gray-200
+  hover:underline
+  md:text-lg;
+}
+
+.Products:hover > .dropDownItems {
+  @apply flex
+  flex-col
+  absolute
+  top-[0.5rem]
+  bg-white/60
+  shadow-lg
+  /* border */
+  /* border-green-500 */
+  rounded
+  duration-700
+  right-0
+  gap-2
+  text-sm
+  w-[10rem]
+  min-h-[13rem]
+  pb-5
+  px-2
+  pt-5
+  mt-5
+  justify-center
+  lg:top-2;
+}
+
+/* Agency Starts */
+
+.Agency {
+  @apply flex
+  items-center
+  flex-col
+  relative
+  duration-700
+  text-sm
+  text-white
+  hover:text-gray-200
+  hover:underline
+  md:text-lg;
+}
+
+.Agency:hover > .dropDownItems {
+  @apply flex
+  flex-col
+  absolute
+  top-[0.5rem]
+  bg-white/60
+  shadow-lg
+  /* border */
+  /* border-green-500 */
+  rounded
+  duration-700
+  right-0
+  gap-2
+  text-sm
+  w-[10rem]
+  min-h-[13rem]
+  pb-5
+  px-2
+  pt-5
+  mt-5
+  justify-center
+  lg:top-2;
+}
+
+/* Footer Start */
+footer {
+  @apply min-h-[10rem]
+  mt-10
+  bg-[#192a51];
+}
+
+/* Home Page */
+.landingPage {
+  @apply w-full;
+}
+
+.bannerBox {
+  @apply bg-white
+   capitalize 
+   mt-5 
+   py-3 
+   px-5 
+   gap-5 
+   flex  
+   md:mt-0 
+   md:hover:text-white 
+   md:hover:bg-orange-400 
+   duration-700  
+   md:flex-col  
+   md:h-[10rem] 
+   md:w-[15rem] 
+   lg:h-[10rem] 
+   lg:w-[20rem];
+}
+
+.openAccDiv {
+  @apply pt-1 
+  text-center 
+  hover:text-blue-900/100 
+  text-sm 
+  md:hover:text-white md:text-lg;
+}
+
+.divBox2 {
+  @apply bg-white
+   capitalize 
+   gap-2 
+   px-5 
+   py-3 
+   shadow-lg 
+   flex 
+   items-center 
+   md:flex 
+   md:flex-col 
+   md:pt-10 
+   md:h-[10rem] 
+   lg:w-[12rem] 
+   lg:h-[10rem];
+}
+
+.ratebox {
+  @apply bg-white 
+    capitalize 
+    mt-5 
+    py-3 
+    px-5 
+    gap-5 
+    shadow-lg 
+    md:flex-col 
+    flex 
+    md:h-[12rem] 
+    md:w-[15rem];
 }
