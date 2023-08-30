@@ -72,41 +72,41 @@ const Navbar = () => {
               <label className="">agency network</label>
 
               <div className="dropDownItems ">
-                <Link href="/nankese">
+                <Link href="/agency/nankese">
                   <div className="dropDownDiv">Nankese Head Office</div>
                 </Link>
 
-                <Link href="/koforidua">
+                <Link href="/agency/koforidua">
                   <div className="dropDownDiv">Koforidua Agency</div>
                 </Link>
 
-                <Link href="/asamankese">
+                <Link href="/agency/asamankese">
                   <div className="dropDownDiv">Asamankese Agency</div>
                 </Link>
 
-                <Link href="/adoagyiri">
+                <Link href="/agency/adoagyiri">
                   <div className="dropDownDiv">adoagyiri Agency</div>
                 </Link>
 
-                <Link href="/adweso">
+                <Link href="/agency/adweso">
                   <div className="dropDownDiv">adweso Agency</div>
                 </Link>
 
-                <Link href="/kade">
+                <Link href="/agency/kade">
                   <div className="dropDownDiv">kade Agency</div>
                 </Link>
 
-                <Link href="/suhum">
+                <Link href="/agency/suhum">
                   <div className="dropDownDiv">suhum Agency</div>
                 </Link>
 
-                <Link href="/osenase">
+                <Link href="/agency/osenase">
                   <div className="dropDownDiv">osenase Agency</div>
                 </Link>
               </div>
             </div>
 
-            <Link href="/contact">
+            <Link href="/contact-us">
               <li>contact us</li>
             </Link>
           </ul>
