@@ -138,6 +138,34 @@ nav ul li {
   ease-out;
 }
 
+/* Sidebar DropDown */
+.smDropdownDiv {
+  @apply relative 
+  flex 
+  flex-col 
+  pt-10 
+  /* w-[10rem]  */
+  h-[10rem] 
+  rounded-lg;
+}
+
+.dropDownButton {
+  @apply bg-white 
+  p-2
+  w-full 
+  flex 
+  items-center 
+  justify-between 
+  font-bold 
+  text-lg 
+  rounded-lg 
+  tracking-wider 
+  border-4 border-transparent 
+  active:border-blue-500 
+  duration-300 
+  active:text-red-600;
+}
+
 /* About end */
 
 /* Products Starts */
