@@ -1,0 +1,13 @@
+{
+  "dropDown": [
+    {
+      "about": [
+        "corporate",
+        "board of directors",
+        "Management",
+        "Major Hallmarks"
+      ],
+      "products": ["loans", "investments", "micro finance scheme"]
+    }
+  ]
+}
