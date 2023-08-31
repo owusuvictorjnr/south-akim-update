@@ -2,9 +2,24 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
+// import dropDown from ''
+
+import {
+  AiOutlineMenu,
+  AiOutlineClose,
+  AiOutlineCaretDown,
+  AiOutlineCaretUp,
+} from 'react-icons/ai'
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+
+  const handleNav = () => {
+    setMenuOpen(!menuOpen)
+  }
+
   return (
     <>
       <nav className="navbar">
@@ -24,7 +39,7 @@ const Navbar = () => {
         </Link>
 
         <div className="">
-          <ul className="">
+          <ul className="hidden sm:flex">
             <div className="About duration-700">
               <label className="">about us</label>
 
@@ -110,6 +125,71 @@ const Navbar = () => {
               <li>contact us</li>
             </Link>
           </ul>
+        </div>
+
+        {/* Sidebar */}
+        <div
+          onClick={handleNav}
+          className="sm:hidden cursor-pointer flex items-center pt-2 pl-24 "
+        >
+          <AiOutlineMenu
+            size={30}
+            color="white"
+            className="hover:bg-blue-500 p-1 px-1 rounded duration-500"
+          />
+        </div>
+        <div
+          className={
+            menuOpen
+              ? 'fixed left-0 top-0 sm:hidden w-[65%] h-screen bg-green-700 p-10 ease-in duration-500'
+              : 'fixed left-[-100%] top-0 p-10 ease-in duration-700'
+          }
+        >
+          <div className="flex w-full items-center justify-between border-b border-gray-400">
+            <div className="flex items-center gap-2  ">
+              <Image
+                src="/logo/logo.jpeg"
+                alt="logo"
+                height={1000}
+                width={1000}
+                quality={100}
+                className="rounded-full h-[2rem] w-[2rem]"
+              />
+              <h1>south akim rural bank</h1>
+            </div>
+            <div onClick={handleNav} className="cursor-pointer duration-700">
+              <AiOutlineClose
+                size={30}
+                color="white"
+                className="hover:bg-red-500 p-1 px-1 rounded duration-500"
+              />
+            </div>
+          </div>
+
+          {/* Small Screen DropDown */}
+          <div className="smDropdownDiv">
+            <button
+              onClick={() => setIsOpen((prev) => !prev)}
+              className="dropDownButton"
+            >
+              about
+              {!isOpen ? (
+                <AiOutlineCaretDown size={20} className="h-8" />
+              ) : (
+                <AiOutlineCaretUp size={20} className="h-8" />
+              )}
+            </button>
+
+            {isOpen && (
+              <div className="bg-red-800 absolute">
+                {/* {dropDown.map((item, i) => (
+                  <div key={i}>
+                    <h3>{}</h3>
+                  </div>
+                ))} */}
+              </div>
+            )}
+          </div>
         </div>
       </nav>
     </>
